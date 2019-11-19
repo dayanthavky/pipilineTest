@@ -8,8 +8,9 @@ pipeline {
         steps {
           script {
                 def json = readJSON file:'myTest.json'
-                echo "name: Dayantha"
-                writeFile(file:'myTest.json', text: json)
+                jsonFile = json.get(0);
+                jsonFile['name'] = "Dayantha"
+                echo "${json}"
           
             }
           }
