@@ -7,8 +7,9 @@ pipeline {
       stage('Setup') {
         steps {
           script {
-                def data = readJSON file:'myTest.json'
+                def json = readJSON file:'myTest.json'
                 echo "name: Dayantha"
+                writeFile(file:'myTest.json', text: json)
           
             }
           }
