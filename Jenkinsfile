@@ -1,7 +1,7 @@
 pipeline {
-    agent {
-        docker { image 'node:8-alpine' }
-    }
+            agent {
+                docker { image 'maven:3-alpine' }
+            }
 
     stages {
       stage('Setup') {
