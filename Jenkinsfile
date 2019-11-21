@@ -16,7 +16,9 @@ pipeline {
           }
         }
       stage('Artifacts') {   
+            steps {
                 copyArtifacts projectName: 'YAML Test', selector: specific('')
+            }
         }         
       }
 
